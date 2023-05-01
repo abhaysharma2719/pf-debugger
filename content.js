@@ -8,6 +8,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             localStorage.setItem("TC_YAAS_DEBUGGER", "false")
         }
     }else if(requestType === "GET_STATUS"){
-        sendResponse({ tcDebugger : localStorage.getItem("tcDebugger") });
+        sendResponse({ tcDebugger : localStorage.getItem("TC_YAAS_DEBUGGER") });
     }
   });
