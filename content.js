@@ -3,9 +3,9 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if(requestType === "CHANGE_STATUS"){
         let isChecked = request.payload.checked
         if(isChecked){
-            localStorage.setItem("tcDebugger", "true")
+            localStorage.setItem("TC_YAAS_DEBUGGER", "true")
         }else{
-            localStorage.setItem("tcDebugger", "false")
+            localStorage.setItem("TC_YAAS_DEBUGGER", "false")
         }
     }else if(requestType === "GET_STATUS"){
         sendResponse({ tcDebugger : localStorage.getItem("tcDebugger") });
